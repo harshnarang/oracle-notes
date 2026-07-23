@@ -1,0 +1,29 @@
+# Private / local-only notes — never publish
+notes/
+private/
+*.local.md
+
+# Oracle output junk
+*.trc
+*.dmp
+*.aud
+*.lst
+alert_*.log
+tnsnames.local.ora
+
+# Credentials — belt and braces
+*.pem
+*.key
+wallet/
+credentials*
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
