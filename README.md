@@ -22,3 +22,4 @@ Baseline is 19c. Queries use `GV$` views so they run unchanged on single instanc
 - `GV$` views throughout, `INST_ID` in the output
 - SQL prompts for values with substitution variables where input is needed
 - Statements that roll back work, hold locks, or require a restart are marked `Caution`
+- Sizing and parameter values are illustrative. Read the current setting and size to the instance rather than copying the number
