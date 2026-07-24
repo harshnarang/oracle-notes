@@ -8,9 +8,12 @@ Baseline is 19c. Queries use `GV$` views so they run unchanged on single instanc
 
 | Error | Description |
 |---|---|
-| [ORA-01555](troubleshooting/ORA-01555.md) | Snapshot too old |
+| [ORA-00257](troubleshooting/ORA-00257.md) | Archiver error, connect internal only until freed |
 | [ORA-00060](troubleshooting/ORA-00060.md) | Deadlock detected while waiting for resource |
+| [ORA-01555](troubleshooting/ORA-01555.md) | Snapshot too old |
+| [ORA-01578](troubleshooting/ORA-01578.md) | Data block corrupted |
 | [ORA-01652](troubleshooting/ORA-01652.md) | Unable to extend temp segment |
+| [ORA-04031](troubleshooting/ORA-04031.md) | Unable to allocate shared memory |
 | [ORA-12541](troubleshooting/ORA-12541.md) | TNS: no listener |
 
 ## Conventions
