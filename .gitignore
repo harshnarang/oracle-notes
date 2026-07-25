@@ -1,4 +1,4 @@
-# Private / local-only notes — never publish
+# Private local notes, never publish
 notes/
 private/
 *.local.md
@@ -11,7 +11,7 @@ private/
 alert_*.log
 tnsnames.local.ora
 
-# Credentials — belt and braces
+# Credentials
 *.pem
 *.key
 wallet/
