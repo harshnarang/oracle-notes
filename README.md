@@ -17,6 +17,12 @@ Baseline is 19c. Queries use `GV$` views so they run unchanged on single instanc
 | [ORA-12541](troubleshooting/ORA-12541.md) | TNS: no listener |
 | [ORA-29740](troubleshooting/ORA-29740.md) | Instance eviction (node eviction) |
 
+## Operations
+
+| Topic | Description |
+|---|---|
+| [Filesystem full on /u01](troubleshooting/filesystem-full-u01.md) | Grid Infrastructure ADR logs filling the mount, safe cleanup with adrci |
+
 ## Conventions
 
 - One error per file, filename is the error code
