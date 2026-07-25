@@ -100,6 +100,34 @@ Purge the database ADR homes the same way, using their homes `diag/rdbms/<db>/<i
 find /u01/app/*/oracle/admin/*/adump -name "*.aud" -mtime +30 -delete
 ```
 
+## Worked example
+
+A 2-node cluster, `/u01` sized 40G on each node, both nodes near full.
+
+Before, node 1:
+
+```
+/u01   40G   37G used   901M free   98%
+```
+
+The GB scan showed the bulk under the listener ADR: about 15G in `diag/tnslsnr/<node>`, across the listener, SCAN listener, and ASM listener alert and trace directories, plus about 4G in `diag/crs/<node>/crs/trace`. The database directories were not the problem.
+
+Measuring only the files older than 3 days confirmed how much the purge would return:
+
+```
+listener   about 13G
+crs trace  about 1G
+```
+
+After the `purge -age 4320` loop across the listener and CRS homes:
+
+```
+node 1   29G used   8.5G free   78%
+node 2   27G used   11G free    71%
+```
+
+Roughly 8G reclaimed per node, all of it old listener and Clusterware logs, with no impact to the databases or the cluster. The retention change then stopped it returning.
+
 ## Do not touch
 
 - The Grid software home, `/u01/app/<version>/grid`. Deleting anything here breaks Grid Infrastructure.
