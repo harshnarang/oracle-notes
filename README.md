@@ -13,6 +13,7 @@ Baseline is 19c. Queries use `GV$` views so they run unchanged on single instanc
 | [ORA-01555](troubleshooting/ORA-01555.md) | Snapshot too old |
 | [ORA-01578](troubleshooting/ORA-01578.md) | Data block corrupted |
 | [ORA-01652](troubleshooting/ORA-01652.md) | Unable to extend temp segment |
+| [ORA-04030](troubleshooting/ORA-04030.md) | Out of process memory (PGA) |
 | [ORA-04031](troubleshooting/ORA-04031.md) | Unable to allocate shared memory |
 | [ORA-12541](troubleshooting/ORA-12541.md) | TNS: no listener |
 | [ORA-29740](troubleshooting/ORA-29740.md) | Instance eviction (node eviction) |
