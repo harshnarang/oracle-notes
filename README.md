@@ -15,6 +15,7 @@ Baseline is 19c. Queries use `GV$` views so they run unchanged on single instanc
 | [ORA-01652](troubleshooting/ORA-01652.md) | Unable to extend temp segment |
 | [ORA-04030](troubleshooting/ORA-04030.md) | Out of process memory (PGA) |
 | [ORA-04031](troubleshooting/ORA-04031.md) | Unable to allocate shared memory |
+| [ORA-04036](troubleshooting/ORA-04036.md) | PGA used by the instance exceeds PGA_AGGREGATE_LIMIT |
 | [ORA-12541](troubleshooting/ORA-12541.md) | TNS: no listener |
 | [ORA-17800](troubleshooting/ORA-17800.md) | Got minus one from a read call, JDBC thin |
 | [ORA-29740](troubleshooting/ORA-29740.md) | Instance eviction (node eviction) |
