@@ -31,6 +31,7 @@ Baseline is 19c. Queries use `GV$` views so they run unchanged on single instanc
 | Script | Description |
 |---|---|
 | [rac_db_blocking_kill.sql](scripts/rac_db_blocking_kill.sql) | Blocking and blocked session pairs across all instances, with a kill statement for the blocker |
+| [rac_db_locks_with_sqls_kill.sql](scripts/rac_db_locks_with_sqls_kill.sql) | The same pairs with the blocking and blocked statement text added |
 
 Scripts report only. Where one builds a statement that changes something, it returns it as text for reading before it is run.
 
