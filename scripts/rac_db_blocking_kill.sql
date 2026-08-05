@@ -1,11 +1,25 @@
 -- rac_db_blocking_kill.sql
 --
--- Blocking and blocked session pairs across every instance, with a ready
--- made kill for the blocker. No statement text, for a fast look at a
+-- Who is blocking whom across every instance, with the kill statement for
+-- the blocker built ready to paste. No statement text, for a fast look at a
 -- terminal. Use rac_db_locks_with_sqls_kill.sql when the SQL is needed.
 --
--- Caution: the generated statement kills a session and rolls back its
--- transaction.
+-- Run as: any user with SELECT_CATALOG_ROLE. Running the generated kill
+--         additionally needs ALTER SYSTEM.
+-- Usage:  @rac_db_blocking_kill
+--
+-- blocked_cnt is how many sessions that blocker is holding up. The sort puts
+-- the worst offender at the top.
+--
+-- kill_script is a string. This script executes nothing. Read the row, then
+-- paste the statement yourself if you want it.
+--
+-- Caution: the generated statement kills the session and rolls back its
+-- transaction. IMMEDIATE returns control to you at once, it does not release
+-- the locks at once, because the rollback still has to finish.
+--
+-- An empty kill_script means the blocker is a background process rather than
+-- a user session, and killing is not the answer there.
 --
 -- Direct pairs only. A chain three deep reports as two unrelated rows.
 -- gv$session.final_blocking_session resolves chains from 11.2.
